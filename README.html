@@ -942,16 +942,16 @@ Start by writing this program and use <em>QuickFix</em> to "generate" the code a
 <div class="title">Testing program</div>
 <div class="content">
 <pre class="rouge highlight"><code data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">PizzaTestDrive</span> <span class="o">{</span>
-  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-    <span class="nc">Pizzeria</span> <span class="n">boutiqueBrest</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PizzeriaBrest</span><span class="o">();</span>
-    <span class="nc">Pizzeria</span> <span class="n">boutiqueStrasbourg</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PizzeriaStrasbourg</span><span class="o">();</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Pizzeria</span> <span class="n">shopFromBrest</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PizzeriaFactory</span><span class="o">().</span><span class="na">create</span><span class="o">(</span><span class="s">"Brest"</span><span class="o">);</span>
+        <span class="nc">Pizzeria</span> <span class="n">shopFromStrasbourg</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PizzeriaFactory</span><span class="o">().</span><span class="na">create</span><span class="o">(</span><span class="s">"Strasbourg"</span><span class="o">);</span>
 
-    <span class="nc">Pizza</span> <span class="n">pizza</span> <span class="o">=</span> <span class="n">boutiqueBrest</span><span class="o">.</span><span class="na">commanderPizza</span><span class="o">(</span><span class="s">"fromage"</span><span class="o">);</span>
-    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"JMB a commandé une "</span> <span class="o">+</span> <span class="n">pizza</span><span class="o">.</span><span class="na">getNom</span><span class="o">()</span> <span class="o">+</span> <span class="s">"\n"</span><span class="o">);</span>
+        <span class="nc">Pizza</span> <span class="n">pizza</span> <span class="o">=</span> <span class="n">shopFromBrest</span><span class="o">.</span><span class="na">orderPizza</span><span class="o">(</span><span class="s">"cheese"</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"JMB has ordered a "</span> <span class="o">+</span> <span class="n">pizza</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">"\n"</span><span class="o">);</span>
 
-    <span class="n">pizza</span> <span class="o">=</span> <span class="n">boutiqueStrasbourg</span><span class="o">.</span><span class="na">commanderPizza</span><span class="o">(</span><span class="s">"fromage"</span><span class="o">);</span>
-    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"JMI a commandé une "</span> <span class="o">+</span> <span class="n">pizza</span><span class="o">.</span><span class="na">getNom</span><span class="o">()</span> <span class="o">+</span> <span class="s">"\n"</span><span class="o">);</span>
-  <span class="o">}</span>
+        <span class="n">pizza</span> <span class="o">=</span> <span class="n">shopFromStrasbourg</span><span class="o">.</span><span class="na">orderPizza</span><span class="o">(</span><span class="s">"cheese"</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"JMI has ordered a "</span> <span class="o">+</span> <span class="n">pizza</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">"\n"</span><span class="o">);</span>
+    <span class="o">}</span>
 <span class="o">}</span></code></pre>
 </div>
 </div>
@@ -1032,7 +1032,7 @@ This assessment is graded. The autograding will run the tests via <code>gradle t
 <div id="footer">
 <div id="footer-text">
 Version 20.1 2020-11-21<br>
-Last updated 2020-11-21 21:57:14 +0100
+Last updated 2020-11-21 22:10:32 +0100
 </div>
 </div>
 </body>
