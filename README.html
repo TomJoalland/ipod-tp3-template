@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.11">
+<meta name="generator" content="Asciidoctor 2.0.12">
 <meta name="author" content="J.-M. Bruel">
 <title>Design Patterns - TP3</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -104,12 +104,12 @@ h1{font-size:2.75em}
 h2{font-size:2.3125em}
 h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
 h4{font-size:1.4375em}}
-table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede;word-wrap:normal}
 table thead,table tfoot{background:#f7f8f7}
 table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt{background:#f8f8f7}
-table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
 .center{margin-left:auto;margin-right:auto}
@@ -207,7 +207,7 @@ table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font
 .admonitionblock>table td.icon{text-align:center;width:80px}
 .admonitionblock>table td.icon img{max-width:none}
 .admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
-.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
 .exampleblock>.content>:first-child{margin-top:0}
@@ -263,9 +263,8 @@ pre.pygments .lineno::before{content:"";margin-right:-.125em}
 .quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
 .quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
 .quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
-table.tableblock{max-width:100%}
 p.tableblock:last-child{margin-bottom:0}
-td.tableblock>.content{margin-bottom:1.25em}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
 td.tableblock>.content>:last-child{margin-bottom:-1.25em}
 table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
 table.grid-all>*>tr>*{border-width:1px}
@@ -286,7 +285,7 @@ th.valign-top,td.valign-top{vertical-align:top}
 th.valign-bottom,td.valign-bottom{vertical-align:bottom}
 th.valign-middle,td.valign-middle{vertical-align:middle}
 table thead th,table tfoot th{font-weight:bold}
-tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th{background:#f7f8f7}
 tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
 p.tableblock>code:only-child{background:none;padding:0}
 p.tableblock{font-size:1em}
@@ -315,6 +314,7 @@ ol.lowergreek{list-style-type:lower-greek}
 .hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
 td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
 td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
 .literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
 .colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
 .colist td:not([class]):first-child img{max-width:none}
@@ -657,7 +657,7 @@ pre.rouge {
 <div class="details">
 <span id="author" class="author">J.-M. Bruel</span><br>
 <span id="email" class="email"><a href="mailto:jbruel@gmail.com">jbruel@gmail.com</a></span><br>
-<span id="revnumber">version 20.1 2020-11-21</span>
+<span id="revnumber">version 20.1 2020-11-24</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -671,8 +671,6 @@ pre.rouge {
 <li><a href="#_rendus_attendus">Rendus attendus</a></li>
 </ul>
 </li>
-<li><a href="#_contributors">Contributors</a></li>
-<li><a href="#_about">About&#8230;&#8203;</a></li>
 </ul>
 </div>
 </div>
@@ -942,87 +940,96 @@ Start by writing this program and use <em>QuickFix</em> to "generate" the code a
 <div class="title">Testing program</div>
 <div class="content">
 <pre class="rouge highlight"><code data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">PizzaTestDrive</span> <span class="o">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-        <span class="nc">Pizzeria</span> <span class="n">shopFromBrest</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PizzeriaFactory</span><span class="o">().</span><span class="na">create</span><span class="o">(</span><span class="s">"Brest"</span><span class="o">);</span>
-        <span class="nc">Pizzeria</span> <span class="n">shopFromStrasbourg</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PizzeriaFactory</span><span class="o">().</span><span class="na">create</span><span class="o">(</span><span class="s">"Strasbourg"</span><span class="o">);</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">Pizzeria</span> <span class="n">shopFromBrest</span> <span class="o">=</span> <span class="nc">PizzeriaFactory</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">create</span><span class="o">(</span><span class="s">"Brest"</span><span class="o">);</span>
+		<span class="nc">Pizzeria</span> <span class="n">shopFromStrasbourg</span> <span class="o">=</span> <span class="nc">PizzeriaFactory</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">create</span><span class="o">(</span><span class="s">"Strasbourg"</span><span class="o">);</span>
 
-        <span class="nc">Pizza</span> <span class="n">pizza</span> <span class="o">=</span> <span class="n">shopFromBrest</span><span class="o">.</span><span class="na">orderPizza</span><span class="o">(</span><span class="s">"cheese"</span><span class="o">);</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"JMB has ordered a "</span> <span class="o">+</span> <span class="n">pizza</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">"\n"</span><span class="o">);</span>
+		<span class="nc">Pizza</span> <span class="n">pizza</span> <span class="o">=</span> <span class="n">shopFromBrest</span><span class="o">.</span><span class="na">orderPizza</span><span class="o">(</span><span class="s">"cheese"</span><span class="o">);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"JMB has ordered a "</span> <span class="o">+</span> <span class="n">pizza</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">"\n"</span><span class="o">);</span>
 
-        <span class="n">pizza</span> <span class="o">=</span> <span class="n">shopFromStrasbourg</span><span class="o">.</span><span class="na">orderPizza</span><span class="o">(</span><span class="s">"cheese"</span><span class="o">);</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"JMI has ordered a "</span> <span class="o">+</span> <span class="n">pizza</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">"\n"</span><span class="o">);</span>
-    <span class="o">}</span>
-<span class="o">}</span></code></pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="title">Résultat d&#8217;exécution</div>
-<div class="content">
-<pre>$ java -jar target/pizzeria-1.0.jar
-Preparation of Pizza with Brest style sauce and cheese
-Spread the pizza dough...
-Add the sauce...
-Add the garnitures:
- Parmigiano reggiano
-Bake 25 minutes at 180°
-Cut the pizza in triangles
-Put the pizza in the official box
-JMB has ordered a Pizza with Brest style sauce and cheese
+		<span class="n">pizza</span> <span class="o">=</span> <span class="n">shopFromStrasbourg</span><span class="o">.</span><span class="na">orderPizza</span><span class="o">(</span><span class="s">"cheese"</span><span class="o">);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"JMI has ordered a "</span> <span class="o">+</span> <span class="n">pizza</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">+</span> <span class="s">"\n"</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}-------</span>
 
-Preparation of Pizza Strasbourg style with cheese
-Spread the pizza dough...
-Add the sauce...
-Add the garnitures:
- Mozzarella
-Bake 25 minutes at 180°
-Cut in square portions
-Put the pizza in the official box
-JMI has ordered a Pizza Strasbourg style with cheese</pre>
-</div>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-This assessment is graded. The autograding will run the tests via <code>gradle test</code> and <code>maven test</code>, as well as <code>test0</code> and the test of the model. This will constitute  80%of your grade. The remaining 20% will be evaluated by your TA and will focus on the tests (number and quality).
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="title"><i class="fa fa-github"></i> commit/push</div>
-<div class="content">
-<pre class="rouge highlight"><code data-lang="shell">fix <span class="c">#All: Completed all duties</span></code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_contributors">Contributors</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="mailto:jbruel@gmail.com">Jean-Michel Bruel</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_about">About&#8230;&#8203;</h2>
-<div class="sectionbody">
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>Baked with <a href="http://asciidoctor.org/">Asciidoctor</a> (version <code>2.0.11</code>) from 'Dan Allen', based on <a href="http://www.methods.co.nz/asciidoc">AsciiDoc</a>.
+<span class="o">.</span><span class="na">Résultat</span> <span class="n">d</span><span class="err">'</span><span class="n">exécution</span>
+<span class="o">............</span>
+<span class="err">$</span> <span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">target</span><span class="o">/</span><span class="n">pizzeria</span><span class="o">-</span><span class="mf">1.0</span><span class="o">.</span><span class="na">jar</span>
+<span class="nc">Preparation</span> <span class="n">of</span> <span class="nc">Pizza</span> <span class="n">with</span> <span class="nc">Brest</span> <span class="n">style</span> <span class="n">sauce</span> <span class="n">and</span> <span class="n">cheese</span>
+<span class="nc">Spread</span> <span class="n">the</span> <span class="n">pizza</span> <span class="n">dough</span><span class="o">...</span>
+<span class="nc">Add</span> <span class="n">the</span> <span class="n">sauce</span><span class="o">...</span>
+<span class="nc">Add</span> <span class="n">the</span> <span class="nl">garnitures:</span>
+ <span class="nc">Parmigiano</span> <span class="n">reggiano</span>
+<span class="nc">Bake</span> <span class="mi">25</span> <span class="n">minutes</span> <span class="n">at</span> <span class="mi">180</span><span class="err">°</span>
+<span class="nc">Cut</span> <span class="n">the</span> <span class="n">pizza</span> <span class="n">in</span> <span class="n">triangles</span>
+<span class="nc">Put</span> <span class="n">the</span> <span class="n">pizza</span> <span class="n">in</span> <span class="n">the</span> <span class="n">official</span> <span class="n">box</span>
+<span class="no">JMB</span> <span class="n">has</span> <span class="n">ordered</span> <span class="n">a</span> <span class="nc">Pizza</span> <span class="n">with</span> <span class="nc">Brest</span> <span class="n">style</span> <span class="n">sauce</span> <span class="n">and</span> <span class="n">cheese</span>
+
+<span class="nc">Preparation</span> <span class="n">of</span> <span class="nc">Pizza</span> <span class="nc">Strasbourg</span> <span class="n">style</span> <span class="n">with</span> <span class="n">cheese</span>
+<span class="nc">Spread</span> <span class="n">the</span> <span class="n">pizza</span> <span class="n">dough</span><span class="o">...</span>
+<span class="nc">Add</span> <span class="n">the</span> <span class="n">sauce</span><span class="o">...</span>
+<span class="nc">Add</span> <span class="n">the</span> <span class="nl">garnitures:</span>
+ <span class="nc">Mozzarella</span>
+<span class="nc">Bake</span> <span class="mi">25</span> <span class="n">minutes</span> <span class="n">at</span> <span class="mi">180</span><span class="err">°</span>
+<span class="nc">Cut</span> <span class="n">in</span> <span class="n">square</span> <span class="n">portions</span>
+<span class="nc">Put</span> <span class="n">the</span> <span class="n">pizza</span> <span class="n">in</span> <span class="n">the</span> <span class="n">official</span> <span class="n">box</span>
+<span class="no">JMI</span> <span class="n">has</span> <span class="n">ordered</span> <span class="n">a</span> <span class="nc">Pizza</span> <span class="nc">Strasbourg</span> <span class="n">style</span> <span class="n">with</span> <span class="n">cheese</span>
+
+<span class="o">............</span>
+
+
+<span class="nl">WARNING:</span> <span class="nc">This</span> <span class="n">assessment</span> <span class="n">is</span> <span class="n">graded</span><span class="o">.</span> <span class="nc">The</span> <span class="n">autograding</span> <span class="n">will</span> <span class="n">run</span> <span class="n">the</span> <span class="n">tests</span> <span class="n">via</span> <span class="err">`</span><span class="n">gradle</span> <span class="n">test</span><span class="err">`</span> <span class="n">and</span> <span class="err">`</span><span class="n">maven</span> <span class="n">test</span><span class="err">`</span><span class="o">,</span> <span class="n">as</span> <span class="n">well</span> <span class="n">as</span> <span class="err">`</span><span class="n">test0</span><span class="err">`</span> <span class="n">and</span> <span class="n">the</span> <span class="n">test</span> <span class="n">of</span> <span class="n">the</span> <span class="n">model</span><span class="o">.</span> <span class="nc">This</span> <span class="n">will</span> <span class="n">constitute</span>  <span class="mi">80</span><span class="o">%</span><span class="n">of</span> <span class="n">your</span> <span class="n">grade</span><span class="o">.</span> <span class="nc">The</span> <span class="n">remaining</span> <span class="mi">20</span><span class="o">%</span> <span class="n">will</span> <span class="n">be</span> <span class="n">evaluated</span> <span class="n">by</span> <span class="n">your</span> <span class="no">TA</span> <span class="n">and</span> <span class="n">will</span> <span class="n">focus</span> <span class="n">on</span> <span class="n">the</span> <span class="nf">tests</span> <span class="o">(</span><span class="n">number</span> <span class="n">and</span> <span class="n">quality</span><span class="o">).</span>
+
+<span class="o">.</span><span class="na">pass</span><span class="o">:[&lt;</span><span class="n">i</span> <span class="kd">class</span><span class="err">="</span><span class="nc">fa</span> <span class="n">fa</span><span class="o">-</span><span class="n">github</span><span class="s">"&gt;&lt;/i&gt;] commit/push
+[source,shell]
+....
+fix #All: Completed all duties
+....
+
+
+
+
+//------------------------------------
+//------------------------------------
+//------------  Still Angry ----------
+//------------------------------------
+//------------------------------------
+
+// :numbered!:
+// [appendix]
+// == {allerPlusLoin}
+
+//----------------------------- Question ------------------
+// .*QUESTION*
+// [WARNING]
+// ====
+// . ...
+// . Commit&amp;Push when everything is ready
+// +
+// ifndef::backend-pdf[.pass:[&lt;i class="</span><span class="n">fa</span> <span class="n">fa</span><span class="o">-</span><span class="n">github</span><span class="s">"&gt;&lt;/i&gt;] commit/push]
+// ifdef::backend-pdf[.icon:github[] commit/push]
+// [source,shell]
+// ....
+// fix #Bonus: Here is additional material...
+// ....
+// +
+// ====
+
+//------------------------------------
+== {contrib}
+//------------------------------------
+
+- mailto:jbruel@gmail.com[Jean-Michel Bruel]
+
+== {about}
+
+****************************************************************
+Baked with {asciidoctorlink} (version `{asciidoctor-version}`) from 'Dan Allen', based on {asciidoc}.
 'Licence Creative Commons'.
-<span class="image"><a class="image" href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="images/88x31.png" alt="Licence Creative Commons"></a></span>
-<a href="http://creativecommons.org/licenses/by-sa/3.0/">licence Creative Commons Paternité - Partage à l&#39;Identique 3.0 non transposé</a>.</p>
+image:88x31.png["</span><span class="nc">Licence</span> <span class="nc">Creative</span>
+<span class="nc">Commons</span><span class="s">",style="</span><span class="n">border</span><span class="o">-</span><span class="nl">width:</span><span class="mi">0</span><span class="s">",link="</span><span class="nl">http:</span><span class="c1">//creativecommons.org/licenses/by-sa/3.0/"]</span>
+<span class="nl">http:</span><span class="c1">//creativecommons.org/licenses/by-sa/3.0/[licence Creative Commons Paternité - Partage à l&amp;#39;Identique 3.0 non transposé].</span>
+<span class="o">****************************************************************</span></code></pre>
 </div>
 </div>
 </div>
@@ -1031,8 +1038,8 @@ This assessment is graded. The autograding will run the tests via <code>gradle t
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 20.1 2020-11-21<br>
-Last updated 2020-11-21 22:10:32 +0100
+Version 20.1 2020-11-24<br>
+Last updated 2020-11-24 13:51:45 +0100
 </div>
 </div>
 </body>
