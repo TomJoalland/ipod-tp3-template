@@ -254,7 +254,8 @@ public class PizzaTestDrive {
 		pizza = shopFromStrasbourg.orderPizza("cheese");
 		System.out.println("JMI has ordered a " + pizza.getName() + "\n");
 	}
-}-------
+}
+-------
 
 .Résultat d'exécution
 ............
